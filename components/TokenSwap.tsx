@@ -21,7 +21,7 @@ export default function TokenSwap({ userAddress }: TokenSwapProps) {
           <h2 className="text-2xl font-bold text-white mb-2">Token Swap</h2>
           <p className="text-gray-300 text-lg mb-6">Coming Soon</p>
           <p className="text-gray-400 text-sm">
-            We're working hard to bring you the best token swapping experience. Stay tuned for updates!
+            We're working hard to bring you the best token swapping experience. Stay tuned for more updates!
           </p>
         </div>
 
