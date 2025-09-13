@@ -800,7 +800,7 @@ export function ClaimCoinReal({ userAddress }: ClaimCoinProps) {
         </motion.div>
       </div>
 
-      {nextClaimTime !== null && (
+      {/* {nextClaimTime !== null && (
         <motion.button
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -814,7 +814,7 @@ export function ClaimCoinReal({ userAddress }: ClaimCoinProps) {
           <RotateCcw className="w-3 h-3" />
           Reset Timer (Testing)
         </motion.button>
-      )}
+      )} */}
 
       {/* Token info */}
       <motion.div
