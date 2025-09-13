@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #121212; /* Dark background for app */
+  --foreground: #ffffff; /* Text and icons */
+  --card: #1e1e1e; /* Card background */
+  --card-foreground: #ffffff; /* Card text */
+  --popover: rgba(0, 0, 0, 0.8); /* Popover background */
+  --popover-foreground: #ffffff; /* Popover text */
+  --primary: #ffbf00; /* Amber for key elements */
+  --primary-foreground: #121212; /* Text on primary */
+  --secondary: #1e1e1e; /* Secondary elements */
+  --secondary-foreground: #ffffff; /* Text on secondary */
+  --muted: rgba(255, 191, 0, 0.5); /* Muted elements */
+  --muted-foreground: #121212; /* Text on muted */
+  --accent: #ff6f00; /* Orange for interactive elements */
+  --accent-foreground: #ffffff; /* Text on accent */
+  --destructive: #ff4c00; /* Red for error states */
+  --destructive-foreground: #ffffff; /* Text on destructive */
+  --border: #333333; /* Border color */
+  --input: #1e1e1e; /* Input background */
+  --ring: rgba(255, 191, 0, 0.5); /* Focus ring color */
+  --chart-1: #ffbf00; /* Chart color 1 */
+  --chart-2: #ff6f00; /* Chart color 2 */
+  --chart-3: #ff4c00; /* Chart color 3 */
+  --chart-4: #ff9100; /* Chart color 4 */
+  --chart-5: #ffb300; /* Chart color 5 */
+  --radius: 0.5rem; /* Corner rounding */
+  --sidebar: #1e1e1e; /* Sidebar background */
+  --sidebar-foreground: #ffffff; /* Sidebar text */
+  --sidebar-primary: #ffbf00; /* Primary sidebar elements */
+  --sidebar-primary-foreground: #121212; /* Text on primary sidebar */
+  --sidebar-accent: #ff6f00; /* Accent sidebar elements */
+  --sidebar-accent-foreground: #ffffff; /* Text on sidebar accent */
+  --sidebar-border: #333333; /* Sidebar border */
+  --sidebar-ring: rgba(255, 191, 0, 0.5); /* Sidebar focus ring */
+
+  /* Legacy support */
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 20, 20, 20;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.minikit-splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  z-index: 9999;
+}
+
+.minikit-splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.minikit-logo {
+  margin-bottom: 1.5rem;
+  animation: pulse 2s infinite;
+}
+
+.minikit-progress {
+  width: 100%;
+  max-width: 300px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.minikit-progress-bar {
+  height: 100%;
+  background-color: #f97316;
+  transition: width 0.3s ease;
+}
+
+.minikit-status {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Custom button styles for BlackOps theme */
+.btn-blackops {
+  background: linear-gradient(to right, #f97316, #facc15);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn-blackops:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3);
+}
+
+.btn-blackops:active {
+  transform: translateY(0);
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}

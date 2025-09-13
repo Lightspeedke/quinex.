@@ -1,0 +1,276 @@
+/* Animation for the progress ring during swipe */
+@keyframes progress {
+  0% {
+    stroke-dashoffset: 302;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-progress {
+  animation: progress 2s linear forwards;
+}
+
+/* Pulse animation for the logo */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.minikit-logo {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Loading dots */
+.loading-dots {
+  position: relative;
+}
+
+/* Claim button styling */
+.claim-button {
+  width: 100%;
+  background: linear-gradient(135deg, #f59f00, #fcc419);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+
+.claim-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(245, 159, 0, 0.4);
+}
+
+.claim-button:disabled {
+  background: #333;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Spinner animation */
+.spinner {
+  animation: spin 1s linear infinite;
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error message styling */
+.error-message {
+  background-color: #3a1010;
+  border: 1px solid #5a1010;
+  color: #ff6b6b;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-size: 14px;
+  animation: shake 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 24rem;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-5px);
+  }
+  40%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.error-icon {
+  color: #ff6b6b;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.error-text {
+  color: #ff6b6b;
+  font-size: 0.875rem;
+  flex-grow: 1;
+}
+
+.retry-button {
+  background-color: transparent;
+  border: 1px solid #ff6b6b;
+  color: #ff6b6b;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-left: 0.75rem;
+}
+
+.retry-button:hover {
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+/* Swipe track and button styling */
+.swipe-track {
+  width: 100%;
+  max-width: 24rem;
+  height: 4rem;
+  background-color: #222;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.swipe-track-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.swipe-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, #f59f00, #fcc419);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+}
+
+.swipe-button:active {
+  cursor: grabbing;
+}
+
+.swipe-button:disabled {
+  background: #333;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.swipe-button.disabled {
+  background: #333;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.swipe-button.disabled .swipe-button-icon {
+  color: #666;
+}
+
+.swipe-button-icon {
+  color: #000;
+}
+
+/* Success container styling */
+.success-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Add styles for the success message animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.success-message {
+  animation: fadeInOut 3s ease-in-out;
+}
+
+.countdown-container {
+  background-color: #222;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 24rem;
+  margin-bottom: 2rem;
+}
+
+.balance-display {
+  margin-bottom: 1.5rem;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #f59f00, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.return-button {
+  width: 100%;
+  max-width: 24rem;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.return-button:hover {
+  background-color: #444;
+}
+
+/* Add styles for the countdown on the button */
+.countdown-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
