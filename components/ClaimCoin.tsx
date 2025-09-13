@@ -313,7 +313,7 @@ export function ClaimCoin({ userAddress }: ClaimCoinProps) {
                 {isLoadingBalance ? <span className="animate-pulse">Loading...</span> : `${formatBalance(balance)} QNX`}
               </p>
             </div>
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2">
               <button
                 onClick={resetClaimTimer}
                 className="p-2 rounded-lg bg-red-700/50 hover:bg-red-700 transition-colors text-xs"
@@ -328,7 +328,7 @@ export function ClaimCoin({ userAddress }: ClaimCoinProps) {
               >
                 <RefreshCw className={`w-4 h-4 text-gray-400 ${isLoadingBalance ? "animate-spin" : ""}`} />
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
